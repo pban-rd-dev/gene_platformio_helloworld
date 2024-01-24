@@ -22,19 +22,16 @@
 上記のように必要な定義ファイルが含まれているので、Visual Studio Code で開き extension のインストールを行うことで
 すぐに開発ができるようになっています。
 
-![Alt text](images/list.png)
-
 ## How to build
 
 Visual Studio Code で platformio extension のインストールを済ませばビルドなどが通る状態になっているので、
 platformio extension 画面から "build" を実行するだけで firmware が作成される。
 
-![Alt text](images/build.png)
+<img src='images/build.png' width='300'>
 
 その後 gene をUSB接続し、"Upload and Monitor" を実行すれば firmware の書き込みが完了する。
 
-![Alt text](images/uploadmonitor
-.png)
+<img src='images/uploadmonitor.png' width='300'>
 
 TERMINAL 画面で以下の出力が確認できます。
 
@@ -53,12 +50,14 @@ TERMINAL 画面で以下の出力が確認できます。
 
 ## Troubleshooting
 
-* include path が通らず Build できない場合
+#### include path が通らず Build できない場合
 
 すでに platformio を使用している場合などにこの問題が起こった場合以下を実行すると解決されるかもしれません
 
-PlatformIO の更新
-![Alt text](images/update.png)
+##### PlatformIO の更新
 
-Intelisense index の更新
-![Alt text](images/reindex.png)
+<img src='images/update.png' width='300'>
+
+##### Intelisense index の更新
+
+<img src='images/reindex.png' width='300'>
