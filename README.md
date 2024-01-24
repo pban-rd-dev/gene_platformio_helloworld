@@ -61,4 +61,4 @@ PlatformIO の更新
 ![Alt text](images/update.png)
 
 Intelisense index の更新
-![Alt text](reindex.png)
+![Alt text](images/reindex.png)
