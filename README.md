@@ -52,7 +52,7 @@ TERMINAL 画面で以下の出力が確認できます。
 
 platformio extension の Advanced/Test を実行すると以下の結果が得られる。
 
-<img src="images/test_result.png" width="500">
+<img src="images/test_result.png" width="600">
 
 ## Troubleshooting
 
