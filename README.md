@@ -12,7 +12,7 @@
          settings.json
  boards/
         gene.json # board 定義
- src/
+ main/
         main.c
  CMakeLists.txt   # espressif idf ビルドファイル
  platformio.ini   # platformio プロジェクトの定義
@@ -47,6 +47,12 @@ TERMINAL 画面で以下の出力が確認できます。
 ␛[0;32mI (8312) app: Hello World.␛[0m
 ␛[0;32mI (9312) app: Hello World.␛[0m
 ```
+
+## How to Test
+
+platformio extension の Advanced/Test を実行すると以下の結果が得られる。
+
+<img src="images/test_result.png" width="300">
 
 ## Troubleshooting
 
