@@ -1,14 +1,13 @@
 #include <stdbool.h>
 
-#include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#define APP "app"
+#include "sample.h"
 
 void app_main() {
     while (true) {
-        ESP_LOGI(APP, "Hello World.");
+        say_greeting();
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
