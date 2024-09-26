@@ -8,3 +8,4 @@ sdkconfig.gene
 CMakeCache.txt
 CMakeFiles/
 /build/
+/sdkconfig
