@@ -67,7 +67,17 @@ windows では sdk install した後、"ESP-IDF 5.x" terminal 内で "pytest" �
 
 [インストール方法](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/contribute/esp-idf-tests-with-pytest.html?highlight=pytest#installation) に従いツールを整備してください。
 
+プロジェクトルートで事前に以下を行っておく。
 ```
+$ idf.py set-target esp32s3
+$ idf.py build
+```
+
+pytest の実行
+
+```
+$ pytest
+...
 --------------------------------------------------- live log setup ----------------------------------------------------
 2024-10-03 19:10:38 INFO Target: esp32s3, Port: COM18
 2024-10-03 19:10:38 Connecting....
