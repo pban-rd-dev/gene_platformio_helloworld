@@ -1,5 +1,15 @@
 # gene platformio sample project
 
+## About gene
+
+* ESP32-S3-WROOM-1-N16R8を搭載 (Dual core, WiFi/Bluetooth classic/BLE, ...)
+* 16 pinout (3V3, GND, SPI, i2c, GPIO, ...)
+* 400mA/h
+* USB TYPE-C
+* MicroSD slot x1
+* RGB LED x1, Charge LED
+* Power btn, Reset btn
+
 ## About Project
 
 このプロジェクトは Visual Studio Code 上での extension [platformio](https://platformio.org/)を使用しております。
@@ -62,10 +72,10 @@ platformio extension の Advanced/Test を実行すると以下の結果が得�
 
 ### Pytest
 
-vscode ではなく [idf sdk] (https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html) で実行されます。
+vscode ではなく [idf sdk] (https://docs.espressif.com/projects/esp-idf/en/v5.2.3/esp32s3/contribute/esp-idf-tests-with-pytest.html) で実行されます。
 windows では sdk install した後、"ESP-IDF 5.x" terminal 内で "pytest" を用いてテストできます。
 
-[インストール方法](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/contribute/esp-idf-tests-with-pytest.html?highlight=pytest#installation) に従いツールを整備してください。
+[インストール方法](https://docs.espressif.com/projects/esp-idf/en/v5.2.3/esp32s3/contribute/esp-idf-tests-with-pytest.html#installation) に従いツールを整備してください。
 
 プロジェクトルートで事前に以下を行っておく。
 ```
