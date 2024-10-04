@@ -10,3 +10,4 @@ CMakeFiles/
 /build/
 /sdkconfig
 __pycache__/
+sdkconfig.old
