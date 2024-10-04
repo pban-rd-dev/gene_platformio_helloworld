@@ -9,3 +9,4 @@ CMakeCache.txt
 CMakeFiles/
 /build/
 /sdkconfig
+__pycache__/
