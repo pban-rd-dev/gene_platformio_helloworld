@@ -32,6 +32,7 @@ jobs:
         echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
         echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
     - name: Upload Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2.0.8
       with:
         files: "${{ env.REPO_NAME }}-${{ env.TAG_NAME }}.zip"
+        token: "${{ secrets.GH_TOKEN }}"
