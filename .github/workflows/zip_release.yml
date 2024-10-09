@@ -1,3 +1,5 @@
+# https://sarathlal.com/automating-release-generation-with-github-actions/
+
 name: Create Archive
 on: 
   push:
@@ -5,18 +7,31 @@ on:
       - v*
 jobs:
   build:
+    name: Create and publish Release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.5
-      with:
-        type: 'zip'
-        filename: 'release.zip'
-        exclusions: '*.git* *.pio* /*__pycache__/* /*node_modules/* *.pytest_cache* .vscode/settings.json'
-
+    - name: checkout 
+      uses: actions/checkout@v3
+    - name: Get Repo Name
+      id: get_repo_name
+      run: |
+        repo_fullname="${{ github.repository }}"
+        repo_name="${ repo_fullname##*/ }""
+        echo "REPO_NAME=${repo_name}" >> $GITHUB_ENV
+    - name: Get Tag Name
+      id: get_tag_name
+      run: |
+          tag_name="${{ github.ref }}"
+          tag_name="${tag_name#refs/tags/}"
+          echo "TAG_NAME=${tag_name}" >> $GITHUB_ENV
+    - name: Create Release
+      run: |
+        echo "Repository Name: $REPO_NAME"
+        echo "Tag Name: $TAG_NAME"
+        git archive --format zip --prefix="${REPO_NAME}/" --output "${REPO_NAME}-${TAG_NAME}.zip" HEAD
+        echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
+        echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
     - name: Upload Release
-      uses: ncipollo/release-action@v1.12.0
+      uses: softprops/action-gh-release@v1
       with:
-          artifacts: "release.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+        files: "${{ env.REPO_NAME }}-${{ env.TAG_NAME }}.zip"
