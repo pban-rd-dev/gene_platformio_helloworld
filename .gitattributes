@@ -1,0 +1,5 @@
+.git* export-ignore
+.pytest_cache export-ignore
+.vscode/settings.json export-ignore
+.pio export-ignore
+__pycache__ export-ignore
