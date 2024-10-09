@@ -16,7 +16,7 @@ jobs:
       id: get_repo_name
       run: |
         repo_fullname="${{ github.repository }}"
-        repo_name="${ repo_fullname##*/ }""
+        repo_name="${repo_fullname##*/}"
         echo "REPO_NAME=${repo_name}" >> $GITHUB_ENV
     - name: Get Tag Name
       id: get_tag_name
